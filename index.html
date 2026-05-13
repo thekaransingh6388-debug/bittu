@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>PANKAJ BHARDWAJ | Stock Market Telegram Channel</title>
     <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '2172005073537833');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2172005073537833&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '823293460828359');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=823293460828359&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
     <style>
         * {
             margin: 0;
@@ -239,7 +239,7 @@
         <div class="center-badge"><span class="badge">📊 STOCK MARKET EXPERT</span></div>
         
         <!-- BUTTON 1 - Top (Exactly niche name ke) -->
-        <a class="telegram-btn" href="https://t.me/+D8vxCp6i7ixlYTVl" target="_blank" rel="noopener noreferrer">
+        <a class="telegram-btn" href="https://t.me/+D8vxCp6i7ixlYTVl" target="_blank" rel="noopener noreferrer" id="joinTopBtn">
             <span>📲</span> JOIN TELEGRAM CHANNEL <span>🚀</span>
         </a>
         
@@ -265,7 +265,7 @@
         
         <!-- SECOND BUTTON (Bottom) - Same link, enhanced dark blue -->
         <div class="btn-group">
-            <a class="telegram-btn" href="https://t.me/+D8vxCp6i7ixlYTVl" target="_blank" rel="noopener noreferrer">
+            <a class="telegram-btn" href="https://t.me/+D8vxCp6i7ixlYTVl" target="_blank" rel="noopener noreferrer" id="joinBottomBtn">
                 <span>⚡</span> JOIN TELEGRAM NOW & GET FREE ACCESS <span>⚡</span>
             </a>
         </div>
@@ -280,6 +280,36 @@
         </div>
     </div>
 </div>
+
+<!-- Facebook Pixel Event Tracking Script -->
+<script>
+    (function() {
+        // Get both buttons
+        var topBtn = document.getElementById('joinTopBtn');
+        var bottomBtn = document.getElementById('joinBottomBtn');
+        
+        // Tracking function
+        function trackSubscribeButtonClick(event) {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead', {
+                    content_name: 'Telegram_Join_PANKAJ',
+                    content_category: 'Subscribe_Button',
+                    button_position: event.target.closest('a').id === 'joinTopBtn' ? 'Top' : 'Bottom'
+                });
+                console.log('✅ Facebook Pixel Lead event tracked - Subscribe Button Clicked');
+            }
+            // Link will work normally - no interruption
+        }
+        
+        // Add click event listeners to both buttons
+        if (topBtn) {
+            topBtn.addEventListener('click', trackSubscribeButtonClick);
+        }
+        if (bottomBtn) {
+            bottomBtn.addEventListener('click', trackSubscribeButtonClick);
+        }
+    })();
+</script>
 
 </body>
 </html>
